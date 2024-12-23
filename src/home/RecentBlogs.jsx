@@ -15,7 +15,7 @@ const RecentBlogs = () => {
     },[])
     return (
         <div>
-            <div>
+            <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4">
                 {
                    blogs.map(blog => <RecentBlogCard key={blog._id} blog={blog}></RecentBlogCard>) 
                 }
