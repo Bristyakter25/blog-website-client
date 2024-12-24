@@ -20,7 +20,7 @@ const Navbar = () => {
     const links = <>
     <div className="gap-x-3 flex">
     <NavLink to='/'><li>Home</li></NavLink>
-    <li>Add Blogs</li>
+    <NavLink to='addBlogs'><li>Add Blogs</li></NavLink>
     <li>All blogs</li>
     <li>Featured Blogs</li>
     <li>Wishlist</li>

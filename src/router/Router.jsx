@@ -8,6 +8,8 @@ import ErrorPage from "../pages/ErrorPage";
 import SignIn from "../pages/signIn/SignIn";
 import Register from "../pages/register/Register";
 import Home from "../home/Home";
+import AddBlogs from "../pages/blogPage/AddBlogs";
+import PrivateRoute from "./PrivateRoute";
 
   const router = createBrowserRouter([
     {
@@ -27,6 +29,10 @@ import Home from "../home/Home";
         {
             path:'/register',
             element:<Register></Register>
+        },
+        {
+          path:'/addBlogs',
+          element:<PrivateRoute><AddBlogs></AddBlogs></PrivateRoute>
         }
 
       ]
