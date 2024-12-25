@@ -32,6 +32,13 @@ const Register = () => {
         photoURL: photo,
       }).then(() => {
         setUser({ ...createdUser, displayName: name, photoURL: photo });
+        Swal.fire({
+          position: "top-end",
+          icon: "success",
+          title: "You are Successfully Registered!",
+          showConfirmButton: false,
+          timer: 1500
+        });
       });
 
     })
