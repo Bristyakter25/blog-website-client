@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 
 const AllBlogsCard = ({ allBlog }) => {
@@ -34,9 +35,9 @@ const AllBlogsCard = ({ allBlog }) => {
         <p className="text-xl font-medium">{longDescription}</p>
         <p className="text-xl font-medium">Category: {category}</p>
         <div className="card-actions justify-end">
-          <button className="btn glass bg-cyan-800 text-white">Details</button>
+        <Link to={`/addBlogs/${allBlog._id}`}><button className="btn glass bg-black text-white">Details</button></Link>
           <button
-            onClick={() => handleAddToWishlist(_id)} // Pass blogId
+            onClick={() => handleAddToWishlist(_id)}
             className="btn glass bg-cyan-800 text-white rounded"
           >
             Add to Wishlist

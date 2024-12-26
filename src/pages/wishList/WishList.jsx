@@ -15,7 +15,7 @@ const WishList = () => {
 
   return (
     <div className="max-w-4xl mx-auto my-10">
-      <h1 className="text-3xl font-bold mb-5">My Wishlist</h1>
+      <h1 className="text-3xl font-bold mb-5 text-center">My Wishlist</h1>
       <div>
       
            {
