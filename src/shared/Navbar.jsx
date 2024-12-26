@@ -11,8 +11,10 @@ const Navbar = () => {
     <NavLink to='/'><li className="text-xl font-semibold hover:text-purple-600">Home</li></NavLink>
     <NavLink to='addBlogs'><li className="hover:text-purple-600 text-xl font-semibold">Add Blogs</li></NavLink>
     <NavLink to='allBlogs'> <li className="text-xl font-semibold hover:text-purple-600">All blogs</li></NavLink>
-    <li className="text-xl font-semibold hover:text-purple-600">Featured Blogs</li>
+    <NavLink to='/featuredBlogs'><li className="text-xl font-semibold hover:text-purple-600">Featured Blogs</li></NavLink>
     <NavLink to='wishList'><li className="text-xl font-semibold hover:text-purple-600">Wishlist</li></NavLink>
+    <NavLink to='trendingTechnology'><li className="text-xl font-semibold hover:text-purple-600">Trending Technology</li></NavLink>
+   
  
     </div>
     </>

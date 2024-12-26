@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
 
 const RecentBlogCard = ({recentBlog}) => {
   const handleAddToWishlist = (blogId) => {
-    fetch("http://localhost:5000/wishList", {
+    fetch("https://blog-website-server-blush.vercel.app/wishList", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -13,9 +14,18 @@ const RecentBlogCard = ({recentBlog}) => {
       .then((res) => res.json())
       .then((data) => {
         if (data.insertedId) {
-          alert("Blog added to wishlist!");
+          Swal.fire({
+            title: "Successfully Wish Listed!",
+            icon: "success",
+            draggable: true
+          });
         } else {
-          alert(data.message);
+          Swal.fire({
+            icon: "error",
+            title: "Blog already added to the wish list!!",
+            text: "Something went wrong!",
+           
+          });;
         }
       })
       .catch((error) => console.error("Error adding to wishlist:", error));

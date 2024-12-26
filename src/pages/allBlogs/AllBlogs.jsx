@@ -15,7 +15,7 @@ const BlogsPage = () => {
 
   
   useEffect(() => {
-    fetch("http://localhost:5000/addBlogs")
+    fetch("https://blog-website-server-blush.vercel.app/addBlogs")
       .then((res) => res.json())
       .then((data) => {
         setAllBlogs(data);

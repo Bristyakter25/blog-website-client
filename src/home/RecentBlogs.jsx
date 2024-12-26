@@ -9,7 +9,7 @@ const RecentBlogs = () => {
 
   useEffect(() => {
     // Fetch recent blogs from the backend
-    fetch("http://localhost:5000/recentBlogs")
+    fetch("https://blog-website-server-blush.vercel.app/recentBlogs")
       .then((res) => res.json())
       .then((data) => {
         setRecentBlogs(data);

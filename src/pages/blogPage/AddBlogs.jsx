@@ -24,7 +24,7 @@ const AddBlogs = () => {
 
     
 
-    fetch('http://localhost:5000/addBlogs', {
+    fetch('https://blog-website-server-blush.vercel.app/addBlogs', {
       method: 'POST',
       headers: {
           'Content-Type': 'application/json',

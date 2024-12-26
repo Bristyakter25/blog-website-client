@@ -1,6 +1,7 @@
 
 import TryNewUi from "../pages/TryNewUi";
 import BannerCarousel from "./BannerCarousel";
+import BannerMotion from "./BannerMotion";
 import RecentBlogs from "./RecentBlogs";
 
 
@@ -10,6 +11,7 @@ const Home = () => {
         <div>
             
             <BannerCarousel></BannerCarousel>
+            <BannerMotion></BannerMotion>
          
             <RecentBlogs></RecentBlogs>
            <TryNewUi></TryNewUi>

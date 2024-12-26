@@ -9,7 +9,7 @@ const DetailsPage = () => {
     const [loading,setLoading] = useState(true);
 
     useEffect(()=>{
-        fetch(`http://localhost:5000/recentBlogs/${id}`)
+        fetch(`https://blog-website-server-blush.vercel.app/recentBlogs/${id}`)
         .then((res)=> res.json())
         .then((data) =>{
             setDetails(data);

@@ -16,6 +16,10 @@ import DetailsPage from "../pages/detailsPage/DetailsPage";
 import DetailsBlog from "../pages/DetailsBlog";
 import UpdateBlog from "../pages/blogPage/UpdateBlog";
 
+import FeaturedBlogPage from "../featuredPage/FetauredBlogPage";
+import TrendingTechnology from "../pages/technology/TrendingTechnology";
+
+
 
   const router = createBrowserRouter([
     {
@@ -49,6 +53,7 @@ import UpdateBlog from "../pages/blogPage/UpdateBlog";
           element:<PrivateRoute><WishList></WishList></PrivateRoute>
 
         },
+        
         {
           path:'recentBlogs/:id',
           element:<DetailsPage></DetailsPage>
@@ -60,7 +65,15 @@ import UpdateBlog from "../pages/blogPage/UpdateBlog";
         {
           path: '/updateBlog/:id',
           element:<PrivateRoute> <UpdateBlog></UpdateBlog></PrivateRoute>,
-          loader: ({ params }) => fetch(`http://localhost:5000/addBlogs/${params.id}`)
+          loader: ({ params }) => fetch(`https://blog-website-server-blush.vercel.app/addBlogs/${params.id}`)
+        },
+        {
+          path:'/featuredBlogs',
+          element:<FeaturedBlogPage></FeaturedBlogPage>
+        },
+        {
+          path:'/trendingTechnology',
+          element:<TrendingTechnology></TrendingTechnology>
         }
 
       ]

@@ -14,9 +14,7 @@ const DetailsCard = ({detail}) => {
     <p>{longDescription}</p>
     <p>Publishing Year: {publishingYear}</p>
     <p>Category:{category}</p>
-    <div className="card-actions justify-end">
-      <button className="btn btn-primary">Buy Now</button>
-    </div>
+    
   </div>
 </div>
     );

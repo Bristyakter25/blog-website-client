@@ -18,7 +18,7 @@ const DetailsBlog = () => {
         };
         console.log(commentData);
 
-        fetch('http://localhost:5000/addComments',{
+        fetch('https://blog-website-server-blush.vercel.app/addComments',{
             method:'POST',
             headers:{
                 'content-type':'application/json'
@@ -43,7 +43,7 @@ const DetailsBlog = () => {
     
 
     useEffect(()=>{
-        fetch(`http://localhost:5000/addBlogs/${id}`)
+        fetch(`https://blog-website-server-blush.vercel.app/addBlogs/${id}`)
         .then((res)=> res.json())
         .then((data) =>{
             setDetails(data);
@@ -87,7 +87,7 @@ const DetailsBlog = () => {
             />
             </div>
           </div>
-          <button type="submit" className="btn btn-primary w-full">
+          <button type="submit" className="btn bg-sky-400 glass w-full text-white">
               Submit Blog
             </button>
            </form>) : (

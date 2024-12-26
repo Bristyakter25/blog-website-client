@@ -5,7 +5,7 @@ const AllBlogsCard = ({ allBlog }) => {
   
 
     const handleAddToWishlist = (blogId) => {
-      fetch("http://localhost:5000/wishList", {
+      fetch("https://blog-website-server-blush.vercel.app/wishList", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

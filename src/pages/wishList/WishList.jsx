@@ -1,13 +1,15 @@
 import { useState, useEffect } from "react";
 import WishListCard from "./WishListCard";
 
+
 const WishList = () => {
   const [addWishList,setAddWishList] = useState([]);
   useEffect(() =>{
-    fetch('http://localhost:5000/wishList')
+    fetch('https://blog-website-server-blush.vercel.app/wishList')
     .then(res => res.json())
     .then(data =>{
-      setAddWishList(data);
+      setAddWishList(data)
+      
     })
   } )
 
