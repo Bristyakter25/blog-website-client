@@ -84,7 +84,7 @@ npm start
 ---
 
 ## 🌐 Live Demo  
-🔗 **[Live Demo]: https://medical-camp-website.web.app/)](https://blog-website-8c111.web.app/** 
+🔗 **[Live Demo]: https://blog-website-8c111.web.app/** 
 
 ## 📂 GitHub Repositories  
 - **Client (Frontend)**: https://github.com/Bristyakter25/blog-website-client
