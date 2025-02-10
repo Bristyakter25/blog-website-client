@@ -18,22 +18,17 @@ const Header = () => {
   
     }
     return (
-        <div className="navbar bg-black p-4">
-  <div className="navbar-start">
-  </div>
-  <div className="navbar-center">
-    <img className="w-12 h-12 rounded-full border border-cyan-500" src={logo} alt="" />
-    <a className="btn btn-ghost text-2xl text-white">Blog Website</a>
-  </div>
-  <div className="navbar-end">
-  {user ? (
+      <div className="navbar bg-black p-4 flex justify-between items-center">
+      <div className="navbar-center flex items-center">
+        <img className="w-12 h-12 rounded-full border border-cyan-500" src={logo} alt="Logo" />
+        <p className="ml-2 text-[12px] lg:text-2xl text-white">WebSophist</p>
+      </div>
+      
+      <div className="navbar-end">
+        {user ? (
           <div className="flex items-center gap-2">
             {/* Show Profile Picture */}
-            <img
-              src={user.photoURL}
-              alt="Profile"
-              className="w-10 h-10 rounded-full"
-            />
+            <img src={user?.photoURL} alt="Profile" className="w-10 h-10 rounded-full" />
             <button onClick={handleSignOut} className="btn">Sign Out</button>
           </div>
         ) : (
@@ -43,8 +38,10 @@ const Header = () => {
             <Link to="/register"><button className="btn">Register</button></Link>
           </div>
         )}
-  </div>
-</div>
+      </div>
+    </div>
+    
+
        
     );
 };
