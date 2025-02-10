@@ -1,4 +1,5 @@
 
+import FAQ from "../pages/faq/Faq";
 import TryNewUi from "../pages/TryNewUi";
 import BannerCarousel from "./BannerCarousel";
 import BannerMotion from "./BannerMotion";
@@ -11,9 +12,11 @@ const Home = () => {
         <div>
             
             <BannerCarousel></BannerCarousel>
-            <BannerMotion></BannerMotion>
+           
          
             <RecentBlogs></RecentBlogs>
+            <FAQ></FAQ>
+            <BannerMotion></BannerMotion>
            <TryNewUi></TryNewUi>
         </div>
     );

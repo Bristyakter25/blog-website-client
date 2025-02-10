@@ -2,15 +2,19 @@ import { Outlet } from "react-router-dom";
 import Navbar from "../shared/Navbar";
 import Footer from "../shared/Footer";
 import Header from "../shared/Header";
+import NavHead from "../shared/NavHead";
 
 
 const MainLayout = () => {
     return (
         <div >
-            <Header></Header>
-            <Navbar></Navbar>
+            <div className="w-[400px] lg:w-full">
+            <NavHead></NavHead>
+
+            </div>
+           
             
-            <div className="max-w-6xl mx-auto">
+            <div className=" lg:max-w-7xl  mx-auto">
             <Outlet></Outlet>
             
 

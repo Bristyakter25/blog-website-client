@@ -10,6 +10,7 @@ const RecentBlogs = () => {
   useEffect(() => {
     // Fetch recent blogs from the backend
     fetch("https://blog-website-server-blush.vercel.app/recentBlogs")
+    // fetch("http://localhost:5000/recentBlogs")
       .then((res) => res.json())
       .then((data) => {
         setRecentBlogs(data);
@@ -21,8 +22,8 @@ const RecentBlogs = () => {
   
     return (
         <div>
-            <h2 className="text-center text-3xl font-bold">Recent Blog Posts</h2>
-            <div className="my-5 grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4">
+            <h2 className="text-center w-full mt-16 text-3xl text-[#A294F9] font-bold mb-10">Recent Blog Posts</h2>
+            <div className="my-5 ml-12 lg:ml-0 grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-5">
 
                 {
                    recentBlogs.map(recentBlog => <RecentBlogCard key={recentBlog._id} recentBlog={recentBlog}></RecentBlogCard>) 

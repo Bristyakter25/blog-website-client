@@ -1,49 +1,36 @@
-
-import image1 from '../assets/Motion images/image 1.jpg'
-import image2 from '../assets/Motion images/image 2.jpg'
-import image3 from '../assets/Motion images/image 3.jpg'
 import { motion } from "framer-motion";
+import image2 from '../assets/Motion images/image 2.jpg';
+
+
 const BannerMotion = () => {
     return (
-        <div className='flex my-10'>
-            <div>
-            <motion.h1 animate={{ x: [200, 0] }}
-      transition={{duration:2, ease:"easeOut",
-        repeat: Infinity,
-        repeatDelay:1
-      }} className="text-5xl font-bold"><img
-      src={image1}
-      className="max-w-sm rounded-lg shadow-2xl" /></motion.h1>
+        <div className="my-10">
+           <h2 className="text-3xl text-[#A294F9]  font-bold text-center ">Features</h2>
+          <div className="flex flex-col md:flex-row items-center justify-between  space-y-6 md:space-y-0">
+         <div className="w-full md:w-1/2 px-4">
+             <h2 className="text-3xl font-bold mb-10">
+                 Simple and Efficient Blog Organization
+             </h2>
+             <p className="text-xl font-medium leading-relaxed">
+                 The Web Development Blog Website is an interactive platform designed to share and explore insightful blogs related to web development. The website is developed with modern tools and technologies to ensure a seamless user experience, dynamic content, and robust features.
+             </p>
+         </div>
 
-      
-      
+         {/* Motion Image Section */}
+         <motion.div
+             className="w-full md:w-1/2 px-4"
+             animate={{ x: 50 }}
+             transition={{
+                 duration: 2,
+                 ease: "easeOut",
+                 repeat: Infinity,
+                 repeatDelay: 1,
+             }}
+         >
+             <img src={image2} alt="Motion Banner" className="rounded-lg shadow-lg" />
+         </motion.div>
+     </div>
         </div>
-        <div>
-            <motion.h1  animate={{ x: [-200, 0] }}
-      transition={{duration:2, ease:"easeIn",
-        repeat: Infinity,
-        repeatDelay:1
-      }} className="text-5xl font-bold"><img
-      src={image2}
-      className="max-w-sm rounded-lg shadow-2xl h-[380px]" /></motion.h1>
-
-      
-      
-        </div>
-        <div>
-            <motion.h1  animate={{ x: [-200, 0] }}
-      transition={{duration:2, ease:"easeIn",
-        repeat: Infinity,
-        repeatDelay:1
-      }} className="text-5xl font-bold"><img
-      src={image3}
-      className="max-w-sm rounded-lg shadow-2xl h-[380px]" /></motion.h1>
-
-      
-      
-        </div>
-        </div>
-        
     );
 };
 
