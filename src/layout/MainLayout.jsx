@@ -7,8 +7,8 @@ import NavHead from "../shared/NavHead";
 
 const MainLayout = () => {
     return (
-        <div >
-            <div className="w-[400px] lg:w-full">
+        <div className="overflow-x-hidden" >
+            <div className="w-full lg:w-full">
             <NavHead></NavHead>
 
             </div>

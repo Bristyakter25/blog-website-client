@@ -35,7 +35,12 @@ const AddBlogs = () => {
       .then(res => res.json())
       .then(data => {
           if (data.insertedId) {
-              alert("Blog added successfully!");
+            Swal.fire({
+              title: "Success!",
+              text: "Your review has been submitted successfully!",
+              icon: "success",
+              confirmButtonText: "OK",
+            });;
           }
       });
   
@@ -43,8 +48,8 @@ const AddBlogs = () => {
     const genres = ["Web Development", "Design", "CSS", "Backend Development", "Security"];
   
     return (
-      <div className="max-w-lg mx-auto my-10">
-        <h1 className="text-3xl font-bold mb-5">Add New Blog</h1>
+      <div className="lg:max-w-lg mx-auto mt-48">
+        <h1 className="text-3xl font-bold  text-center">Add New Blog</h1>
         <form onSubmit={handleSubmitBlog} className="space-y-4 bg-white p-6 rounded shadow">
           <div>
             <label className="block font-medium">Blog Title</label>
@@ -108,7 +113,7 @@ const AddBlogs = () => {
           
   
           <div>
-            <button type="submit" className="btn btn-primary w-full">
+            <button type="submit" className="btn bg-[#7E60BF] hover:text-black text-white w-full">
               Submit Blog
             </button>
           </div>

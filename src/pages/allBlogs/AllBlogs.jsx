@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import AllBlogsCard from "./AllBlogsCard";
+import AvailableBlogs from "../../home/AvailableBlogs";
 
 const BlogsPage = () => {
   const [allBlogs, setAllBlogs] = useState([]); // Stores all blogs
@@ -36,15 +37,15 @@ const BlogsPage = () => {
   };
 
   return (
-    <div className="max-w-4xl mx-auto my-10">
-      <h1 className="text-3xl font-bold mb-5">All Blogs</h1>
+    <div className="max-w-4xl mx-auto my-48">
+      <h1 className="text-3xl font-bold mb-5 text-center text-[#A294F9]">All Blogs</h1>
 
       {/* Category Table */}
       <div className="flex gap-4 mb-6">
         <button
           onClick={() => filterByCategory("All")}
-          className={`px-4 py-2 border rounded ${
-            selectedCategory === "All" ? "bg-blue-500 text-white" : ""
+          className={`px-4 py-2 border rounded hover:bg-purple-500 hover:text-white ${
+            selectedCategory === "All" ? "bg-purple-500 text-white" : ""
           }`}
         >
           All
@@ -53,14 +54,17 @@ const BlogsPage = () => {
           <button
             key={category}
             onClick={() => filterByCategory(category)}
-            className={`px-4 py-2 border rounded ${
-              selectedCategory === category ? "bg-blue-500 text-white" : ""
+            className={`px-4 py-2 border rounded hover:bg-purple-500 hover:text-white ${
+              selectedCategory === category ? "bg-purple-500 text-white" : ""
             }`}
           >
             {category}
           </button>
         ))}
       </div>
+
+     {/* <AvailableBlogs allBlogs={allBlogs}></AvailableBlogs> */}
+     <AvailableBlogs allBlogs={allBlogs} />
 
      
       <div>

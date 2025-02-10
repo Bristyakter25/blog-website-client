@@ -13,12 +13,11 @@ const FeaturedBlogPage = () => {
     const fetchBlogs = async () => {
       try {
         const response = await fetch(
-          'https://blog-website-server-blush.vercel.app/addBlogs' 
+          'https://blog-website-server-blush.vercel.app/addBlogs'
         );
         if (!response.ok) throw new Error('Failed to fetch blogs');
         const data = await response.json();
 
-        
         const sortedBlogs = data
           .map((blog) => ({
             ...blog,
@@ -36,7 +35,6 @@ const FeaturedBlogPage = () => {
     fetchBlogs();
   }, []);
 
-  
   const columnHelper = createColumnHelper();
   const columns = [
     columnHelper.accessor('title', {
@@ -65,40 +63,44 @@ const FeaturedBlogPage = () => {
   });
 
   return (
-    <div className='my-5'>
+    <div className='my-52 p-4'>
       <h2 className='text-center font-semibold text-3xl '>Featured Blogs</h2>
-      <table style={{ border: '1px solid black', width: '100%', marginTop: '20px' }}>
-        <thead>
-          {table.getHeaderGroups().map((headerGroup) => (
-            <tr key={headerGroup.id}>
-              {headerGroup.headers.map((header) => (
-                <th
-                  key={header.id}
-                  style={{ padding: '10px', border: '1px solid black' }}
-                >
-                  {header.isPlaceholder
-                    ? null
-                    : header.column.columnDef.header}
-                </th>
-              ))}
-            </tr>
-          ))}
-        </thead>
-        <tbody>
-          {table.getRowModel().rows.map((row) => (
-            <tr key={row.id}>
-              {row.getVisibleCells().map((cell) => (
-                <td
-                  key={cell.id}
-                  style={{ padding: '10px', border: '1px solid black' }}
-                >
-                  {cell.getValue()}
-                </td>
-              ))}
-            </tr>
-          ))}
-        </tbody>
-      </table>
+      
+      {/* Horizontal scroll wrapper for mobile devices */}
+      <div className="overflow-x-auto mt-6">
+        <table className="min-w-full" style={{ border: '1px solid black' }}>
+          <thead>
+            {table.getHeaderGroups().map((headerGroup) => (
+              <tr key={headerGroup.id}>
+                {headerGroup.headers.map((header) => (
+                  <th
+                    key={header.id}
+                    style={{ padding: '10px', border: '1px solid black' }}
+                  >
+                    {header.isPlaceholder
+                      ? null
+                      : header.column.columnDef.header}
+                  </th>
+                ))}
+              </tr>
+            ))}
+          </thead>
+          <tbody>
+            {table.getRowModel().rows.map((row) => (
+              <tr key={row.id}>
+                {row.getVisibleCells().map((cell) => (
+                  <td
+                    key={cell.id}
+                    style={{ padding: '10px', border: '1px solid black' }}
+                  >
+                    {cell.getValue()}
+                  </td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };

@@ -7,13 +7,16 @@ const Navbar = () => {
   
     const links = <>
     
-    <div className="gap-x-5 flex">
-    <NavLink to='/'><li className="text-xl font-semibold hover:text-purple-600">Home</li></NavLink>
-    <NavLink to='addBlogs'><li className="hover:text-purple-600 text-xl font-semibold">Add Blogs</li></NavLink>
-    <NavLink to='allBlogs'> <li className="text-xl font-semibold hover:text-purple-600">All blogs</li></NavLink>
-    <NavLink to='/featuredBlogs'><li className="text-xl font-semibold hover:text-purple-600">Featured Blogs</li></NavLink>
-    <NavLink to='wishList'><li className="text-xl font-semibold hover:text-purple-600">Wishlist</li></NavLink>
-    <NavLink to='trendingTechnology'><li className="text-xl font-semibold hover:text-purple-600">Trending Technology</li></NavLink>
+    <div className="gap-x-10 lg:flex">
+    <NavLink to='/'><li className="text-2xl text-[#2A004E] font-semibold hover:text-purple-600">Home</li></NavLink>
+    <NavLink to='addBlogs'><li className="hover:text-purple-600 text-2xl text-[#2A004E] font-semibold">Add Blogs</li></NavLink>
+    <NavLink to='allBlogs'> <li className="text-2xl text-[#2A004E] font-semibold hover:text-purple-600">All blogs</li></NavLink>
+    <NavLink to='/featuredBlogs'><li className="text-2xl text-[#2A004E] font-semibold hover:text-purple-600">Featured Blogs</li></NavLink>
+    <NavLink to="/wishList">
+  <li className="text-2xl text-[#2A004E] font-semibold hover:text-purple-600">Wishlist</li>
+</NavLink>
+
+    <NavLink to='trendingTechnology'><li className="text-2xl text-[#2A004E] font-semibold hover:text-purple-600">Trending Technology</li></NavLink>
    
  
     </div>
@@ -55,9 +58,9 @@ const Navbar = () => {
   <div className="navbar-end gap-x-2">
   
   </div>
-  {/* <div className="text-3xl font-semibold flex justify-end mb-5">{user.email}</div> */}
+ 
 </div>
-<div className="divider "></div>
+<div className="lg:divider "></div>
 </div>
     );
 };

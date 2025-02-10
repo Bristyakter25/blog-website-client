@@ -10,7 +10,7 @@ const TrendingTechnology = () => {
   ];
 
   return (
-    <div className="bg-gray-100 p-5 rounded-lg mt-8 mb-8">
+    <div className="bg-gray-100 p-5 rounded-lg mt-48 mb-8">
       <h3 className="text-2xl font-bold text-center">Trending Technologies in Web Development</h3>
       <ul className="mt-4">
         {technologies.map((tech, index) => (

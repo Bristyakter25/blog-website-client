@@ -49,10 +49,10 @@ const router = createBrowserRouter([
         element:<AllBlogs></AllBlogs>
       },
       {
-        path:'/wishList/user/:email',
-        element:<PrivateRoute><WishList></WishList></PrivateRoute>
-
+        path: '/wishList',
+        element: <PrivateRoute><WishList /></PrivateRoute>,
       },
+      
       
       {
         path:'recentBlogs/:id',
