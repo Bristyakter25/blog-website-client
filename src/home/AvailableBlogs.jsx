@@ -16,7 +16,7 @@ const AvailableBlogs = () => {
           
       }, []);
   return (
-    <div className="mt-24">
+    <div className="mt-24 ">
      
       <h2 className="text-3xl font-bold text-[#A294F9] text-center mb-5">Available Blogs </h2>
       <Marquee pauseOnHover={true} className="space-x-10">

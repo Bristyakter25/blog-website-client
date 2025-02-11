@@ -41,7 +41,7 @@ const FAQ = () => {
 
   return (
     <div className="w-full  p-5 rounded-2xl my-16 ">
-      <h1 className="text-3xl text-[#A294F9] w-full rounded-2xl font-bold text-center mb-6">Frequently Asked Questions</h1>
+      <h1 className="text-3xl text-[#A294F9]  w-full rounded-2xl font-bold text-center mb-10">Frequently Asked Questions</h1>
       <div className="faq-list w-full rounded-2xl bg-[#DAD2FF] dark:bg-purple-500 p-7">
         {questionsAndAnswers.map((item, index) => (
           <div key={index} className="faq-item border-b border-gray-300 mb-4">
