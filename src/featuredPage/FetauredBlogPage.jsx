@@ -7,6 +7,7 @@ import {
 
 const FeaturedBlogPage = () => {
   const [blogs, setBlogs] = useState([]);
+  const [loading, setLoading] = useState(true); // Add loading state
 
   // Fetch blogs data
   useEffect(() => {
@@ -27,8 +28,10 @@ const FeaturedBlogPage = () => {
           .slice(0, 10);
 
         setBlogs(sortedBlogs);
+        setLoading(false); // Set loading to false after data is fetched
       } catch (error) {
         console.error('Error fetching blogs:', error);
+        setLoading(false); // Set loading to false even in case of an error
       }
     };
 
@@ -65,42 +68,49 @@ const FeaturedBlogPage = () => {
   return (
     <div className='my-52 p-4'>
       <h2 className='text-center font-semibold text-3xl '>Featured Blogs</h2>
-      
-      {/* Horizontal scroll wrapper for mobile devices */}
-      <div className="overflow-x-auto mt-6">
-        <table className="min-w-full" style={{ border: '1px solid black' }}>
-          <thead>
-            {table.getHeaderGroups().map((headerGroup) => (
-              <tr key={headerGroup.id}>
-                {headerGroup.headers.map((header) => (
-                  <th
-                    key={header.id}
-                    style={{ padding: '10px', border: '1px solid black' }}
-                  >
-                    {header.isPlaceholder
-                      ? null
-                      : header.column.columnDef.header}
-                  </th>
-                ))}
-              </tr>
-            ))}
-          </thead>
-          <tbody>
-            {table.getRowModel().rows.map((row) => (
-              <tr key={row.id}>
-                {row.getVisibleCells().map((cell) => (
-                  <td
-                    key={cell.id}
-                    style={{ padding: '10px', border: '1px solid black' }}
-                  >
-                    {cell.getValue()}
-                  </td>
-                ))}
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+
+      {/* Show loading spinner while fetching */}
+      {loading ? (
+        <div className="flex justify-center mt-10">
+          <span className="loading loading-infinity text-purple-500 w-36"></span>
+        </div>
+      ) : (
+        // Horizontal scroll wrapper for mobile devices
+        <div className="overflow-x-auto mt-6">
+          <table className="min-w-full" style={{ border: '1px solid black' }}>
+            <thead>
+              {table.getHeaderGroups().map((headerGroup) => (
+                <tr key={headerGroup.id}>
+                  {headerGroup.headers.map((header) => (
+                    <th
+                      key={header.id}
+                      style={{ padding: '10px', border: '1px solid black' }}
+                    >
+                      {header.isPlaceholder
+                        ? null
+                        : header.column.columnDef.header}
+                    </th>
+                  ))}
+                </tr>
+              ))}
+            </thead>
+            <tbody>
+              {table.getRowModel().rows.map((row) => (
+                <tr key={row.id}>
+                  {row.getVisibleCells().map((cell) => (
+                    <td
+                      key={cell.id}
+                      style={{ padding: '10px', border: '1px solid black' }}
+                    >
+                      {cell.getValue()}
+                    </td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
     </div>
   );
 };
