@@ -21,7 +21,7 @@ const DetailsPage = () => {
         return <p>Loading...</p>;
     }
     return (
-        <div  className='lg:mt-32 mt-40'>
+        <div  className='lg:mt-44 mt-40 '>
            <h2 className='text-center text-2xl font-bold my-5'>This is Details Page</h2>
         <div>
         <DetailsCard detail={details} />

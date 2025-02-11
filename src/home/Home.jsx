@@ -10,7 +10,7 @@ import RecentBlogs from "./RecentBlogs";
 
 const Home = () => {
     return (
-        <div >
+        <div className="w-full" >
             
             <BannerCarousel></BannerCarousel>
            

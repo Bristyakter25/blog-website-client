@@ -57,7 +57,7 @@ const DetailsBlog = () => {
  
     return (
         <div>
-           <h2 className='text-center text-2xl font-bold my-5'>This is Details Page</h2>
+           <h2 className='text-center  text-2xl lg:mt-28 mt-40 font-bold mb-5'>This is Details Page</h2>
            <div><DetailsBlogCard detail={details}></DetailsBlogCard></div>
            <div className="my-5">
 

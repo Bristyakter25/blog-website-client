@@ -8,7 +8,7 @@ const WishList = () => {
 
   useEffect(() => {
     if (user?.email) {
-      fetch(`https://blog-website-server-blush.vercel.app/wishList/user/${user.email}`)
+      fetch("https://blog-website-server-blush.vercel.app/wishList")
         .then((res) => res.json())
         .then((data) => {
           setAddWishList(data);

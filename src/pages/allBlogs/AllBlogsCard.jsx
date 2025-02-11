@@ -37,9 +37,9 @@ const AllBlogsCard = ({ allBlog }) => {
   }
 
   return (
-    <div className="card bg-base-100 w-full shadow-xl">
+    <div className="card bg-base-100 mx-auto dark:bg-purple-700 w-full shadow-xl">
       <figure>
-        <img className="w-full h-[450px]" src={photo} alt="blog" />
+        <img className="w-full h-[250px] lg:h-[450px]" src={photo} alt="blog" />
       </figure>
       <div className="card-body">
         <h2 className="card-title text-3xl text-cyan-500 font-bold">{title}</h2>

@@ -37,31 +37,38 @@ const BlogsPage = () => {
   };
 
   return (
-    <div className="max-w-4xl mx-auto my-48">
+    <div className="w-full mx-auto my-48">
       <h1 className="text-3xl font-bold mb-5 text-center text-[#A294F9]">All Blogs</h1>
 
-      {/* Category Table */}
-      <div className="flex gap-4 mb-6">
+   
+      <div className="w-full mx-auto mb-6 px-3">
+  <div className="w-full max-w-screen-lg mx-auto overflow-x-auto whitespace-nowrap scrollbar-hide">
+    <div className="inline-flex justify-start gap-4 px-4 w-full snap-x snap-mandatory">
+      <button
+        onClick={() => filterByCategory("All")}
+        className={`px-4 py-2 border rounded min-w-max hover:bg-purple-500 hover:text-white ${
+          selectedCategory === "All" ? "bg-purple-500 text-white" : ""
+        }`}
+      >
+        All
+      </button>
+      {categories.map((category) => (
         <button
-          onClick={() => filterByCategory("All")}
-          className={`px-4 py-2 border rounded hover:bg-purple-500 hover:text-white ${
-            selectedCategory === "All" ? "bg-purple-500 text-white" : ""
+          key={category}
+          onClick={() => filterByCategory(category)}
+          className={`px-4 py-2 border rounded min-w-max hover:bg-purple-500 hover:text-white ${
+            selectedCategory === category ? "bg-purple-500 text-white" : ""
           }`}
         >
-          All
+          {category}
         </button>
-        {categories.map((category) => (
-          <button
-            key={category}
-            onClick={() => filterByCategory(category)}
-            className={`px-4 py-2 border rounded hover:bg-purple-500 hover:text-white ${
-              selectedCategory === category ? "bg-purple-500 text-white" : ""
-            }`}
-          >
-            {category}
-          </button>
-        ))}
-      </div>
+      ))}
+    </div>
+  </div>
+</div>
+
+
+
 
      {/* <AvailableBlogs allBlogs={allBlogs}></AvailableBlogs> */}
      <AvailableBlogs allBlogs={allBlogs} />
@@ -69,7 +76,7 @@ const BlogsPage = () => {
      
       <div>
         {filteredBlogs.length > 0 ? (
-          <div className="space-y-4">
+          <div className="space-y-6 ">
             {filteredBlogs.map((allBlog) => (
               <AllBlogsCard key={allBlog._id} allBlog={allBlog}></AllBlogsCard>
              ))}

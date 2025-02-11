@@ -33,26 +33,26 @@ const FAQ = () => {
 
   const toggleAnswer = (index) => {
     if (openIndex === index) {
-      setOpenIndex(null); // Close the answer if it's already open
+      setOpenIndex(null); 
     } else {
-      setOpenIndex(index); // Open the clicked answer
+      setOpenIndex(index); 
     }
   };
 
   return (
-    <div className="faq-container max-w-5xl p-5 rounded-2xl  mx-auto my-16 ">
-      <h1 className="text-3xl text-[#A294F9] font-bold text-center mb-6">Frequently Asked Questions</h1>
-      <div className="faq-list bg-[#DAD2FF] p-7">
+    <div className="w-full  p-5 rounded-2xl my-16 ">
+      <h1 className="text-3xl text-[#A294F9] w-full rounded-2xl font-bold text-center mb-6">Frequently Asked Questions</h1>
+      <div className="faq-list w-full rounded-2xl bg-[#DAD2FF] dark:bg-purple-500 p-7">
         {questionsAndAnswers.map((item, index) => (
           <div key={index} className="faq-item border-b border-gray-300 mb-4">
             <div
-              className="faq-question text-xl hover:text-purple-500 font-semibold cursor-pointer py-3"
+              className="faq-question text-xl hover:text-purple-500 font-semibold dark:hover:text-sky-400 cursor-pointer py-3"
               onClick={() => toggleAnswer(index)}
             >
               {item.question}
             </div>
             {openIndex === index && (
-              <div className="faq-answer text-gray-700 px-4 pb-3">{item.answer}</div>
+              <div className="faq-answer text-gray-700 dark:text-white px-4 pb-3">{item.answer}</div>
             )}
           </div>
         ))}

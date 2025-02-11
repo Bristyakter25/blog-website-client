@@ -1,13 +1,11 @@
 import Header from "./Header";
 import Navbar from "./Navbar";
 
-
-const NavHead = () => {
+const NavHead = ({ toggleTheme, isDarkMode }) => {
     return (
         <div className="w-full lg:w-full fixed top-0 z-10">
-            <Header></Header>
-            <Navbar></Navbar>
-
+            <Header />
+            <Navbar toggleTheme={toggleTheme} isDarkMode={isDarkMode} />
         </div>
     );
 };
