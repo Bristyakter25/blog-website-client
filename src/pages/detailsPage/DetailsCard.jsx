@@ -3,9 +3,9 @@
 const DetailsCard = ({detail}) => {
     const {title,category,longDescription,photo,publishingYear} = detail;
     return (
-        <div className="card card-compact bg-base-100 dark:bg-purple-700 w-full shadow-xl">
+        <div className="card card-compact bg-base-100 dark:bg-purple-700 lg:w-full w-[330px] mx-auto shadow-xl">
   <figure>
-    <img className="w-full h-[350px]"
+    <img className="w-full h-[250px]  lg:h-[400px]"
       src={photo}
       alt="blog" />
   </figure>

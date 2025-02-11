@@ -37,14 +37,14 @@ const AllBlogsCard = ({ allBlog }) => {
   }
 
   return (
-    <div className="card bg-base-100 mx-auto dark:bg-purple-700 w-full shadow-xl">
+    <div className="card bg-base-100 mx-auto dark:bg-purple-700 w-[330px] lg:w-full shadow-xl">
       <figure>
         <img className="w-full h-[250px] lg:h-[450px]" src={photo} alt="blog" />
       </figure>
-      <div className="card-body">
-        <h2 className="card-title text-3xl text-cyan-500 font-bold">{title}</h2>
-        <p className="text-xl font-medium">{longDescription}</p>
-        <p className="text-xl font-medium">Category: {category}</p>
+      <div className="lg:p-8 p-3">
+        <h2 className="lg:text-3xl mb-2 text-xl text-cyan-500 font-bold">{title}</h2>
+        <p className="lg:text-xl mb-2 text-[16px] ">{longDescription}</p>
+        <p className="lg:text-xl mb-2 text-[16px] "><span className="font-bold ">Category:</span> {category}</p>
         <div className="card-actions justify-end">
           <Link to={`/addBlogs/${_id}`}>
             <button className="btn glass bg-[#6C48C5] hover:text-purple-700 text-white ">Details</button>

@@ -11,13 +11,13 @@ const TrendingTechnology = () => {
 
   return (
     <div className='max-h-screen my-10'>
-      <div className="bg-gray-100 p-5  rounded-lg mt-48 mb-8">
+      <div className="bg-gray-100 dark:bg-purple-700 p-5  rounded-lg mt-48 mb-8">
       <h3 className="text-2xl font-bold text-center">Trending Technologies in Web Development</h3>
       <ul className="mt-4">
         {technologies.map((tech, index) => (
           <li key={index} className="mt-4">
-            <h4 className="font-semibold text-xl text-blue-600">{tech.name}</h4>
-            <p className="text-gray-600">{tech.description}</p>
+            <h4 className="font-semibold text-xl dark:text-sky-300 text-blue-600">{tech.name}</h4>
+            <p className="text-gray-600 dark:text-white">{tech.description}</p>
           </li>
         ))}
       </ul>
