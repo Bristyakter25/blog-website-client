@@ -33,32 +33,34 @@ const SignIn = () => {
         })
     }
     return (
-        <div className="hero bg-base-200 min-h-screen mt-36 lg:mt-10">
+        <div className="hero bg-base-200 min-h-screen mt-40 lg:mt-32">
   <div className="hero-content flex-col lg:flex-row-reverse">
-    <div className="text-center lg:text-left w-[250px] lg:w-[450px]">
+    <div className="text-center lg:text-left w-[250px] lg:w-[500px] ml-5">
      <Lottie animationData={loginAnimation}></Lottie>
     </div>
-    <div className="card bg-base-100 w-full  shrink-0 shadow-2xl">
-    <h1 className="text-4xl font-bold  text-center mt-4">Sign In Here!</h1>
+    <div className="card bg-base-100 w-full   shadow-2xl">
+    <h1 className="text-4xl font-bold dark:text-black  text-center mt-4">Sign In Here!</h1>
       <form onSubmit={handleSignIn} className="card-body">
         <div className="form-control">
           <label className="label">
             <span className="label-text">Email</span>
           </label>
-          <input type="email" name="email" placeholder="email" className="input input-bordered" required />
+          <input type="email" name="email" placeholder="email" className="input input-bordered dark:text-black" required />
         </div>
+
+      
         <div className="form-control">
           <label className="label">
             <span className="label-text">Password</span>
           </label>
-          <input type="password" name="password" placeholder="password" className="input input-bordered" required />
+          <input type="password" name="password" placeholder="password" className="input dark:text-black input-bordered" required />
           
         </div>
         <div className="form-control mt-6">
           <button className="btn btn-primary">Sign In</button>
         </div>
       </form>
-      <p className="text-center my-5">
+      <p className="text-center dark:text-black my-5">
             Don't have an account?{" "}
             <Link to="/register" className="text-red-500">
               Register

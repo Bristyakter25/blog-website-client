@@ -80,11 +80,11 @@ const Register = () => {
   return (
     <div className="hero bg-base-200 min-h-screen mt-40 lg:mt-32">
       <div className="hero-content flex-col lg:flex-row-reverse">
-        <div className="text-center lg:text-left w-[250px] lg:w-96 ml-5">
+        <div className="text-center lg:text-left w-[300px] lg:w-[500px] ml-5">
           <Lottie animationData={registerAnimation}></Lottie>
         </div>
         <div className="card bg-base-100 w-full  shadow-2xl">
-          <h1 className="text-4xl font-bold  mt-4 text-center">Register Here!</h1>
+          <h1 className="text-4xl font-bold  dark:text-black mt-4 text-center">Register Here!</h1>
 
           <form onSubmit={handleRegister} className="card-body">
           <div className="form-control">
@@ -95,7 +95,7 @@ const Register = () => {
               name="name"
               type="text"
               placeholder="Enter your name"
-              className="input input-bordered"
+              className="input dark:text-black input-bordered"
               required
             />
           </div>
@@ -107,7 +107,7 @@ const Register = () => {
               name="photo"
               type="text"
               placeholder="photo url"
-              className="input input-bordered"
+              className="input dark:text-black input-bordered"
               required
             />
           </div>
@@ -119,7 +119,7 @@ const Register = () => {
                 type="email"
                 name="email"
                 placeholder="email"
-                className="input input-bordered"
+                className="input dark:text-black input-bordered"
                 required
               />
             </div>
@@ -131,7 +131,7 @@ const Register = () => {
                 type="password"
                 name="password"
                 placeholder="password"
-                className="input input-bordered"
+                className="input dark:text-black input-bordered"
                 required
               />
             </div>
@@ -143,7 +143,7 @@ const Register = () => {
               <button className="btn btn-primary">Register</button>
             </div>
           </form>
-          <p className="text-center my-5">
+          <p className="text-center dark:text-black my-5">
             Already Registered?{" "}
             <Link to="/signIn" className="text-red-500">
               Sign In

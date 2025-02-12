@@ -19,7 +19,7 @@ const SocialLogin = () => {
     <div className="w-28 mx-auto">
         <div className="divider ">OR</div>
        
-      <button onClick={handleGoogleSignIn} className="btn m-4 bg-teal-700 text-white">Google</button>
+      <button onClick={handleGoogleSignIn} className="btn m-4 bg-purple-400 text-white">Google</button>
     </div>
   );
 };
