@@ -64,7 +64,7 @@ const Header = ({ toggleTheme, isDarkMode }) => {
         <div className="navbar-end flex gap-x-2 mr-20">
           <button
             onClick={toggleTheme}
-            className="p-4 rounded btn-lg  bg-purple-300 dark:bg-purple-700"
+            className="p-4 rounded btn-md  bg-purple-300 dark:bg-purple-700"
           >
             {isDarkMode ? "☀️ Light" : "🌙 Dark"}
           </button>
