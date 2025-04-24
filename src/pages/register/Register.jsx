@@ -78,60 +78,60 @@ const Register = () => {
   };
 
   return (
-    <div className="hero bg-base-200 min-h-screen mt-40 lg:mt-40">
+    <div className="hero bg-gray-100 dark:bg-black min-h-screen mt-40 lg:mt-40">
       <div className="hero-content flex-col lg:flex-row-reverse">
-        <div className="text-center lg:text-left w-[300px] lg:w-[500px] ml-5">
+        <div className="text-center  lg:text-left w-[300px] lg:w-[500px] ml-5">
           <Lottie animationData={registerAnimation}></Lottie>
         </div>
-        <div className="card bg-base-100 w-full  shadow-2xl">
+        <div className="card bg-white dark:bg-purple-400  w-full  shadow-2xl">
           <h1 className="text-4xl font-bold  dark:text-black mt-4 text-center">Register Here!</h1>
 
           <form onSubmit={handleRegister} className="card-body">
           <div className="form-control">
             <label className="label">
-              <span className="label-text font-bold">Your Name</span>
+              <span className="label-text dark:text-white font-bold">Your Name</span>
             </label>
             <input
               name="name"
               type="text"
               placeholder="Enter your name"
-              className="input dark:text-black input-bordered"
+              className="input dark:text-black bg-white input-bordered"
               required
             />
           </div>
           <div className="form-control">
             <label className="label">
-              <span className="label-text font-bold">Photo URL</span>
+              <span className="label-text dark:text-white font-bold">Photo URL</span>
             </label>
             <input
               name="photo"
               type="text"
               placeholder="photo url"
-              className="input dark:text-black input-bordered"
+              className="input dark:text-black bg-white input-bordered"
               required
             />
           </div>
             <div className="form-control">
               <label className="label">
-                <span className="label-text">Email</span>
+                <span className="label-text dark:text-white">Email</span>
               </label>
               <input
                 type="email"
                 name="email"
                 placeholder="email"
-                className="input dark:text-black input-bordered"
+                className="input dark:text-black bg-white input-bordered"
                 required
               />
             </div>
             <div className="form-control">
               <label className="label">
-                <span className="label-text">Password</span>
+                <span className="label-text dark:text-white">Password</span>
               </label>
               <input
                 type="password"
                 name="password"
                 placeholder="password"
-                className="input dark:text-black input-bordered"
+                className="input dark:text-black bg-white input-bordered"
                 required
               />
             </div>
@@ -140,10 +140,10 @@ const Register = () => {
               <p className="text-red-500 font-semibold mt-2">{error}</p>
             )}
             <div className="form-control mt-6">
-              <button className="btn btn-primary">Register</button>
+              <button className="btn text-white hover:bg-purple-800 dark:hover:bg-purple-800 bg-purple-400 dark:bg-purple-500">Register</button>
             </div>
           </form>
-          <p className="text-center dark:text-black my-5">
+          <p className="text-center dark:text-black  my-5">
             Already Registered?{" "}
             <Link to="/signIn" className="text-red-500">
               Sign In

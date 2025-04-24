@@ -57,7 +57,7 @@ const SignIn = () => {
           
         </div>
         <div className="form-control mt-6">
-          <button className="btn btn-primary">Sign In</button>
+          <button className="btn text-white hover:bg-purple-800 dark:hover:bg-purple-800 bg-purple-400 dark:bg-purple-500">Sign In</button>
         </div>
       </form>
       <p className="text-center dark:text-black my-5">
