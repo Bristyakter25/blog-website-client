@@ -21,9 +21,9 @@ const RecentBlogs = () => {
 
   
     return (
-        <div>
+        <div >
             <h2 className="text-center w-full mt-20 text-3xl text-[#A294F9] font-bold mb-10">Recent Blog Posts</h2>
-            <div className="my-5 ml-12 lg:ml-0 grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-5">
+            <div className="my-5  grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-x-14 gap-y-10">
 
                 {
                    recentBlogs.map(recentBlog => <RecentBlogCard key={recentBlog._id} recentBlog={recentBlog}></RecentBlogCard>) 

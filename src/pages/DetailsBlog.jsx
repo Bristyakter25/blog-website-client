@@ -57,12 +57,12 @@ const DetailsBlog = () => {
  
     return (
         <div>
-           <h2 className='text-center  text-2xl lg:mt-28 mt-40 font-bold mb-5'>This is Details Page</h2>
+           <h2 className='text-center  text-2xl lg:mt-40 mt-40 font-bold mb-5'>This is Details Page</h2>
            <div><DetailsBlogCard detail={details}></DetailsBlogCard></div>
            <div className="my-5">
 
             {user && user.email === details?.userEmail ? (<> you cant comment </>)  : user ? 
-           (<form onSubmit={handleAddComment} className="space-y-4 bg-white p-6 rounded shadow">
+           (<form onSubmit={handleAddComment} className="space-y-4 bg-white dark:bg-purple-600 p-6 rounded shadow">
            <div >
            
 
@@ -80,7 +80,7 @@ const DetailsBlog = () => {
             <input
               type="text"
               name="comment"
-              className="input input-bordered w-full"
+              className="input input-bordered dark:text-black w-full"
               placeholder="Enter the comments"
               required
               

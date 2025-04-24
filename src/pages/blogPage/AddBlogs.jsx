@@ -56,7 +56,7 @@ const AddBlogs = () => {
             <input
               type="text"
               name="title"
-              className="input input-bordered w-full"
+              className="input dark:text-black input-bordered w-full"
               placeholder="Enter the blog title"
               required
             />
@@ -67,7 +67,7 @@ const AddBlogs = () => {
             <input
               type="url"
               name="photo"
-              className="input input-bordered w-full"
+              className="input dark:text-black input-bordered w-full"
               placeholder="Enter the URL of the blog cover"
               required
             />
@@ -77,7 +77,7 @@ const AddBlogs = () => {
             <label className="block font-medium">Long Description</label>
             <textarea
               name="longDescription"
-              className="textarea textarea-bordered w-full"
+              className="textarea dark:text-black textarea-bordered w-full"
               placeholder="Write your description here..."
               required
             ></textarea>
@@ -88,7 +88,7 @@ const AddBlogs = () => {
             <input
               type="number"
               name="publishingYear"
-              className="input input-bordered w-full"
+              className="input dark:text-black input-bordered w-full"
               placeholder="Enter the publishing year"
               min="1995"
               max={new Date().getFullYear()}
@@ -98,7 +98,7 @@ const AddBlogs = () => {
   
           <div>
             <label className="block font-medium">Category</label>
-            <select name="category" className="select select-bordered w-full" required defaultValue="">
+            <select name="category" className="select dark:text-black select-bordered w-full" required defaultValue="">
               <option value="" disabled>
                 Select a genre
               </option>

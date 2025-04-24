@@ -3,7 +3,7 @@ import logo from "../assets/logo/project logo.png";
 import AuthContext from "../context/AuthContext";
 import { Link } from "react-router-dom";
 
-const Header = () => {
+const Header = ({ toggleTheme, isDarkMode }) => {
   const { user, signOutUser } = useContext(AuthContext);
 
   const handleSignOut = () => {
@@ -61,6 +61,14 @@ const Header = () => {
             </Link>
           </div>
         )}
+        <div className="navbar-end flex gap-x-2 mr-20">
+          <button
+            onClick={toggleTheme}
+            className="p-4 rounded btn-lg  bg-purple-300 dark:bg-purple-700"
+          >
+            {isDarkMode ? "☀️ Light" : "🌙 Dark"}
+          </button>
+        </div>
       </div>
     </div>
   );

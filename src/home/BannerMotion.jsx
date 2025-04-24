@@ -19,7 +19,7 @@ const BannerMotion = () => {
          {/* Motion Image Section */}
          <motion.div
              className="lg:w-[600px] w-[330px]  md:w-1/2 px-4"
-             animate={{ x: 50 }}
+             animate={{ x: 40 }}
              transition={{
                  duration: 2,
                  ease: "easeOut",

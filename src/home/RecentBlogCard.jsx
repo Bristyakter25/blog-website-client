@@ -32,7 +32,7 @@ const RecentBlogCard = ({recentBlog}) => {
   };
     const {title,longDescription,photo,_id} = recentBlog;
     return (
-        <div className="card dark:bg-purple-700 card-compact bg-base-100 w-[300px]  shadow-xl">
+        <div className="card dark:bg-purple-700 card-compact bg-base-100 w-[320px] mx-auto shadow-xl">
   <figure>
     <img className="w-full h-[200px]"
       src={photo}

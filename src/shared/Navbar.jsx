@@ -2,100 +2,86 @@ import { NavLink } from "react-router-dom";
 import { useContext } from "react";
 import AuthContext from "../context/AuthContext";
 
-const Navbar = ({ toggleTheme, isDarkMode }) => {
+const Navbar = () => {
   const { user } = useContext(AuthContext);
 
   const publicLinks = (
-    <div className="gap-x-5 lg:flex mr-5">
-      <NavLink to="/">
-        <li className="text-2xl font-semibold hover:text-purple-600 dark:text-white">
+    <>
+      <li>
+        <NavLink to="/" className="text-2xl font-semibold hover:text-purple-600 dark:text-white">
           Home
-        </li>
-      </NavLink>
-      <NavLink to="allBlogs">
-        <li className="text-2xl font-semibold hover:text-purple-600 dark:text-white">
+        </NavLink>
+      </li>
+      <li>
+        <NavLink to="/allBlogs" className="text-2xl font-semibold hover:text-purple-600 dark:text-white">
           All Blogs
-        </li>
-      </NavLink>
-      <NavLink to="trendingTechnology">
-        <li className="text-2xl font-semibold hover:text-purple-600 dark:text-white">
+        </NavLink>
+      </li>
+      <li>
+        <NavLink to="/trendingTechnology" className="text-2xl font-semibold hover:text-purple-600 dark:text-white">
           Trending Technology
-        </li>
-      </NavLink>
-    </div>
+        </NavLink>
+      </li>
+    </>
   );
 
   const privateLinks = (
-    <div className="gap-x-5 lg:flex">
-      <NavLink to="addBlogs">
-        <li className="text-2xl font-semibold hover:text-purple-600 dark:text-white">
+    <>
+      <li>
+        <NavLink to="/addBlogs" className="text-2xl font-semibold hover:text-purple-600 dark:text-white">
           Add Blogs
-        </li>
-      </NavLink>
-      <NavLink to="/featuredBlogs">
-        <li className="text-2xl font-semibold hover:text-purple-600 dark:text-white">
+        </NavLink>
+      </li>
+      <li>
+        <NavLink to="/featuredBlogs" className="text-2xl font-semibold hover:text-purple-600 dark:text-white">
           Featured Blogs
-        </li>
-      </NavLink>
-      <NavLink to="/wishList">
-        <li className="text-2xl font-semibold hover:text-purple-600 dark:text-white">
+        </NavLink>
+      </li>
+      <li>
+        <NavLink to="/wishList" className="text-2xl font-semibold hover:text-purple-600 dark:text-white">
           Wishlist
-        </li>
-      </NavLink>
-    </div>
+        </NavLink>
+      </li>
+    </>
   );
 
   return (
-    <div>
-      <div className="navbar bg-base-100 dark:bg-gray-900 dark:text-white">
-        <div className="navbar-start">
+    <div className="bg-white  text-purple-400 dark:bg-gray-900 dark:text-white">
+      <div className=" w-[1124px] mx-auto">
+        
+        {/* Mobile Dropdown - Left side */}
+        <div className="navbar-start lg:hidden">
           <div className="dropdown">
-            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h8m-8 6h16"
-                />
+            <button tabIndex={0} className="btn btn-ghost">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" />
               </svg>
-            </div>
+            </button>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content bg-base-100 dark:bg-gray-800 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+              className="menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-100 dark:bg-gray-800 rounded-box w-52 z-[999]"
             >
               {publicLinks}
-              {user && privateLinks} {/* Show private links only if user is logged in */}
+              {user && privateLinks}
             </ul>
           </div>
         </div>
 
-        {/* Centered Navbar Links */}
-        <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
+        {/* Centered Navbar - Large Devices */}
+        <div className=" hidden  lg:flex">
+          <ul className="menu menu-horizontal  gap-x-5 px-1">
             {publicLinks}
             {user && privateLinks}
           </ul>
         </div>
 
-        {/* Navbar End - Dark Mode Toggle */}
-        <div className="navbar-end flex gap-x-2 mr-20">
-          <button
-            onClick={toggleTheme}
-            className="p-4 rounded btn-lg  bg-purple-300 dark:bg-purple-700"
-          >
-            {isDarkMode ? "☀️ Light" : "🌙 Dark"}
-          </button>
+        
+        <div className="navbar-end hidden lg:flex">
+        
         </div>
       </div>
 
-      <div className="lg:divider"></div>
+      <div className="divider lg:divider"></div>
     </div>
   );
 };

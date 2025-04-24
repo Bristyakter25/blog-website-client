@@ -16,11 +16,10 @@ const SocialLogin = () => {
    })
   };
   return (
-    <div className="w-28 mx-auto">
-        <div className="divider ">OR</div>
-       
-      <button onClick={handleGoogleSignIn} className="btn m-4 bg-purple-400 text-white">Google</button>
-    </div>
+    <div className="w-full dark:text-black mx-auto flex flex-col items-center">
+  <div className="divider">OR</div>
+  <button onClick={handleGoogleSignIn} className="btn flex justify-center m-5 bg-purple-400 text-white">Sign up with Google</button>
+</div>
   );
 };
 
