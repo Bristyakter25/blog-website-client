@@ -43,7 +43,7 @@ const BlogsPage = () => {
     <div className="w-full mx-auto my-48">
       <h1 className="text-3xl font-bold mb-5 text-center text-[#A294F9]">All Blogs</h1>
 
-      <div className="w-full mx-auto mb-6 px-3">
+      <div className="w-full mx-auto mb-10 px-3">
         <div className="w-full max-w-screen-lg mx-auto overflow-x-auto whitespace-nowrap scrollbar-hide">
           <div className="inline-flex justify-start lg:justify-center gap-4 px-4 w-full snap-x snap-mandatory">
             <button
@@ -77,11 +77,11 @@ const BlogsPage = () => {
       ) : (
         <>
           {/* <AvailableBlogs allBlogs={allBlogs}></AvailableBlogs> */}
-          <AvailableBlogs allBlogs={allBlogs} />
+          {/* <AvailableBlogs allBlogs={allBlogs} /> */}
 
-          <div>
+          <div className="lg:w-[1024px] w-[350px] mx-auto">
             {filteredBlogs.length > 0 ? (
-              <div className="space-y-6">
+              <div className=" grid lg:grid-cols-2 gap-y-5 gap-x-4 grid-cols-1  mx-auto">
                 {filteredBlogs.map((allBlog) => (
                   <AllBlogsCard key={allBlog._id} allBlog={allBlog}></AllBlogsCard>
                 ))}

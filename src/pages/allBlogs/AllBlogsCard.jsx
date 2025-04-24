@@ -37,21 +37,21 @@ const AllBlogsCard = ({ allBlog }) => {
   }
 
   return (
-    <div className="card bg-base-100 mx-auto dark:bg-purple-700 w-[330px] lg:w-full shadow-xl">
+    <div className="card bg-white mx-auto dark:bg-purple-700 w-[330px] lg:w-full h-[700px] shadow-xl">
       <figure>
-        <img className="w-full h-[250px] lg:h-[450px]" src={photo} alt="blog" />
+        <img className="w-full h-[250px] lg:h-[300px]" src={photo} alt="blog" />
       </figure>
-      <div className="lg:p-8 p-3">
+      <div className="lg:p-8 h-[350px]  p-3">
         <h2 className="lg:text-3xl mb-2 text-xl text-cyan-500 font-bold">{title}</h2>
         <p className="lg:text-xl mb-2 text-[16px] ">{longDescription}</p>
         <p className="lg:text-xl mb-2 text-[16px] "><span className="font-bold ">Category:</span> {category}</p>
         <div className="card-actions justify-end">
           <Link to={`/addBlogs/${_id}`}>
-            <button className="btn glass bg-[#6C48C5] hover:text-purple-700 text-white ">Details</button>
+            <button className="btn glass hover:bg-purple-200 bg-[#6C48C5] hover:text-purple-700 text-white ">Details</button>
           </Link>
           <button
             onClick={() => handleAddToWishlist(_id)}  
-            className="btn glass hover:text-purple-700  bg-[#A294F9] text-white rounded"
+            className="btn hover:bg-purple-200 glass hover:text-purple-700  bg-[#A294F9] text-white rounded"
           >
             Add to Wishlist
           </button>

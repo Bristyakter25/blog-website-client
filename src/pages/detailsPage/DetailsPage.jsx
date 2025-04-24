@@ -21,9 +21,9 @@ const DetailsPage = () => {
         return <p>Loading...</p>;
     }
     return (
-        <div  className='lg:mt-44 mt-40 '>
-           <h2 className='text-center text-2xl font-bold my-5'>This is Details Page</h2>
-        <div>
+        <div  className='lg:mt-32 pt-14 mt-40 '>
+           <h2 className='text-center text-3xl font-bold my-5'>This is  Details Page</h2>
+        <div className='lg:w-[1000px] w-[350px] mx-auto'>
         <DetailsCard detail={details} />
         </div>
         </div>
