@@ -56,7 +56,7 @@ const AddBlogs = () => {
             <input
               type="text"
               name="title"
-              className="input dark:text-black input-bordered w-full"
+              className="input dark:text-black bg-white input-bordered w-full"
               placeholder="Enter the blog title"
               required
             />
@@ -67,7 +67,7 @@ const AddBlogs = () => {
             <input
               type="url"
               name="photo"
-              className="input dark:text-black input-bordered w-full"
+              className="input dark:text-black bg-white   input-bordered w-full"
               placeholder="Enter the URL of the blog cover"
               required
             />
@@ -77,7 +77,7 @@ const AddBlogs = () => {
             <label className="block font-medium">Long Description</label>
             <textarea
               name="longDescription"
-              className="textarea dark:text-black textarea-bordered w-full"
+              className="textarea dark:text-black bg-white  textarea-bordered w-full"
               placeholder="Write your description here..."
               required
             ></textarea>
@@ -88,7 +88,7 @@ const AddBlogs = () => {
             <input
               type="number"
               name="publishingYear"
-              className="input dark:text-black input-bordered w-full"
+              className="input dark:text-black bg-white   input-bordered w-full"
               placeholder="Enter the publishing year"
               min="1995"
               max={new Date().getFullYear()}
@@ -98,7 +98,7 @@ const AddBlogs = () => {
   
           <div>
             <label className="block font-medium">Category</label>
-            <select name="category" className="select dark:text-black select-bordered w-full" required defaultValue="">
+            <select name="category" className="select bg-white dark:text-black select-bordered w-full" required defaultValue="">
               <option value="" disabled>
                 Select a genre
               </option>
@@ -113,7 +113,7 @@ const AddBlogs = () => {
           
   
           <div>
-            <button type="submit" className="btn bg-[#7E60BF] hover:text-black text-white w-full">
+            <button type="submit" className="btn bg-[#7E60BF] hover:bg-purple-300 hover:text-black text-white w-full">
               Submit Blog
             </button>
           </div>
