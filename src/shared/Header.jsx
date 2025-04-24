@@ -17,7 +17,7 @@ const Header = ({ toggleTheme, isDarkMode }) => {
   };
 
   return (
-    <div className="bg-[#493D9E] p-3 md:p-4  flex items-center justify-between lg:px-[340px]">
+    <div className="bg-[#493D9E] px-2 md:p-4  flex items-center justify-between lg:px-[340px]">
       
       {/* Logo & Website Name */}
       <div className="flex items-center gap-2">
@@ -32,7 +32,7 @@ const Header = ({ toggleTheme, isDarkMode }) => {
       </div>
 
       {/* Authentication Section */}
-      <div className="flex items-center lg:mr-0 mr-10 gap-3  md:gap-5">
+      <div className="flex items-center  gap-3  md:gap-5">
         {user ? (
           <div className="flex items-center gap-2">
             <img
@@ -61,7 +61,7 @@ const Header = ({ toggleTheme, isDarkMode }) => {
             </Link>
           </div>
         )}
-        <div className="navbar-end flex gap-x-2 mr-20">
+        <div className="navbar-end flex gap-x-2 ">
           <button
             onClick={toggleTheme}
             className="p-4 rounded btn-md  bg-purple-300 dark:bg-purple-700"
