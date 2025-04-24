@@ -42,7 +42,7 @@ const Header = ({ toggleTheme, isDarkMode }) => {
             />
             <button
               onClick={handleSignOut}
-              className="btn bg-purple-400 hover:bg-purple-500 text-white text-xs md:text-sm lg:text-base px-3 md:px-4 lg:px-5 py-1 md:py-2"
+              className="btn bg-purple-400 hover:bg-purple-500 text-white px-2 lg:w-[100px] w-[60px]"
             >
               Sign Out
             </button>
@@ -50,12 +50,12 @@ const Header = ({ toggleTheme, isDarkMode }) => {
         ) : (
           <div className="flex items-center gap-2">
             <Link to="/signIn">
-              <button className="btn bg-purple-400 hover:bg-purple-500 text-white text-xs md:text-sm lg:text-base px-3 md:px-4 lg:px-5 py-1 md:py-2">
+              <button className="btn bg-purple-400 hover:bg-purple-500 text-white px-2 lg:w-[100px] w-[60px]">
                 Sign In
               </button>
             </Link>
             <Link to="/register">
-              <button className="btn bg-purple-400 hover:bg-purple-500 text-white text-xs md:text-sm lg:text-base px-3 md:px-4 lg:px-5 py-1 md:py-2">
+              <button className="btn bg-purple-400 hover:bg-purple-500 text-white px-2 lg:w-[100px] w-[60px]">
                 Register
               </button>
             </Link>

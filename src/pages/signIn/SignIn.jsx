@@ -33,27 +33,27 @@ const SignIn = () => {
         })
     }
     return (
-        <div className="hero bg-base-200 min-h-screen mt-40 lg:mt-32">
+        <div className="hero bg-gray-100 dark:bg-black min-h-screen mt-40 lg:mt-32">
   <div className="hero-content flex-col lg:flex-row-reverse">
     <div className="text-center lg:text-left w-[250px] lg:w-[500px] ml-5">
      <Lottie animationData={loginAnimation}></Lottie>
     </div>
-    <div className="card bg-base-100 w-full   shadow-2xl">
+    <div className="card bg-white dark:bg-purple-400 w-full   shadow-2xl">
     <h1 className="text-4xl font-bold dark:text-black  text-center mt-4">Sign In Here!</h1>
       <form onSubmit={handleSignIn} className="card-body">
         <div className="form-control">
           <label className="label">
-            <span className="label-text">Email</span>
+            <span className="label-text dark:text-white">Email</span>
           </label>
-          <input type="email" name="email" placeholder="email" className="input input-bordered dark:text-black" required />
+          <input type="email" name="email" placeholder="email" className="input input-bordered bg-white dark:text-black" required />
         </div>
 
       
         <div className="form-control">
           <label className="label">
-            <span className="label-text">Password</span>
+            <span className="label-text dark:text-white">Password</span>
           </label>
-          <input type="password" name="password" placeholder="password" className="input dark:text-black input-bordered" required />
+          <input type="password" name="password" placeholder="password" className="input bg-white dark:text-black input-bordered" required />
           
         </div>
         <div className="form-control mt-6">
