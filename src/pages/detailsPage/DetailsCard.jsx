@@ -9,7 +9,7 @@ const DetailsCard = ({detail}) => {
       src={photo}
       alt="blog" />
   </figure>
-  <div className="card-body dark:bg-purple-300 bg-white">
+  <div className="card-body dark:bg-purple-700 bg-white">
     <h2 className=" text-2xl font-bold text-center">{title}</h2>
     <p className="text-xl mb-2">{longDescription}</p>
     <p className="text-xl mb-2"><span className="font-bold">Publishing Year:</span> {publishingYear}</p>

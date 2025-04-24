@@ -84,14 +84,14 @@ const DetailsBlog = () => {
             <input
               type="text"
               name="comment"
-              className="input input-bordered dark:text-black w-full"
+              className="input input-bordered text-white w-full"
               placeholder="Enter the comments"
               required
               
             />
             </div>
           </div>
-          <button type="submit" className="btn bg-sky-400 glass w-full text-white">
+          <button type="submit" className="btn hover:bg-purple-200  hover:text-purple-700  bg-[#A294F9]  glass w-full text-white">
               Submit Blog
             </button>
            </form>) : (
