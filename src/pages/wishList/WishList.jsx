@@ -33,7 +33,7 @@ const WishList = () => {
           <span className="loading loading-infinity text-purple-500 w-36"></span>
         </div>
       ) : (
-        <div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-4 gap-y-5">
           {addWishList.length > 0 ? (
             addWishList.map((wishList) => (
               <WishListCard key={wishList._id} wishList={wishList} />
