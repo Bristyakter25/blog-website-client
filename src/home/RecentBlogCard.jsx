@@ -42,10 +42,10 @@ const RecentBlogCard = ({recentBlog}) => {
     <h2 className="card-title">{title}</h2>
     <p>{longDescription}</p>
     <div className="card-actions justify-end">
-      <Link to={`/recentBlogs/${recentBlog._id}`}><button className="btn glass bg-[#6C48C5] hover:text-purple-700 text-white">Details</button></Link>
+      <Link to={`/recentBlogs/${recentBlog._id}`}><button className="btn glass bg-[#6C48C5] hover:bg-purple-200 hover:text-purple-700 text-white">Details</button></Link>
       <button
             onClick={() => handleAddToWishlist(_id)} // Pass blogId
-            className="btn hover:text-purple-700 glass bg-[#A294F9] text-white rounded"
+            className="btn hover:bg-purple-200 hover:text-purple-700 glass bg-[#A294F9] text-white rounded"
           >
             Add to Wishlist
           </button>

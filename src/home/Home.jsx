@@ -10,9 +10,11 @@ import RecentBlogs from "./RecentBlogs";
 
 const Home = () => {
     return (
-        <div className="w-full" >
+        <div >
+             <BannerCarousel></BannerCarousel>
+            <div className="lg:max-w-7xl mx-auto" >
             
-            <BannerCarousel></BannerCarousel>
+           
            
          
             <RecentBlogs></RecentBlogs>
@@ -20,6 +22,7 @@ const Home = () => {
             <FAQ></FAQ>
             <BannerMotion></BannerMotion>
            <TryNewUi></TryNewUi>
+        </div>
         </div>
     );
 };

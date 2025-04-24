@@ -34,7 +34,7 @@ const MainLayout = () => {
         <div className="overflow-x-hidden bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white transition-all">
             <NavHead toggleTheme={toggleTheme} isDarkMode={isDarkMode} />
             
-            <div className="lg:max-w-7xl mx-auto mt-16">
+            <div className=" mt-16">
                 <Outlet />
             </div>
 

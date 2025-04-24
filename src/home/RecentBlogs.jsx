@@ -29,6 +29,7 @@ const RecentBlogs = () => {
                    recentBlogs.map(recentBlog => <RecentBlogCard key={recentBlog._id} recentBlog={recentBlog}></RecentBlogCard>) 
                 }
             </div>
+           
   
         </div>
     );
